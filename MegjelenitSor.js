@@ -27,6 +27,13 @@ class MegjelenitSor {
       // console.log(this)
       this.#esemenyTrigger("torles");
     });
+
+    this.megseElem.on("click", () => {
+      // callback fv.
+      // console.log(this)
+      this.#esemenyTrigger("megse");
+    });
+  
   }
 
   setHatterszin() {
@@ -43,7 +50,7 @@ class MegjelenitSor {
       }
     }
 
-    txt += `<td><span class="kesz">✔️</span> <td><span class="megse">X</span> <span class="torol">🗑</span></td>`;
+    txt += `<td><span class="kesz">✔️</span> <td><span class="megse"> <img width="30px" src="megse.png" alt="megse"> </span> <span class="torol">🗑</span></td>`;
     txt += "</tr>";
 
     this.tablaElem.append(txt);

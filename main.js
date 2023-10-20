@@ -21,4 +21,14 @@ $(function () {
         new Megjelenit(TODOLIST2, szuloELEM)
     })
 
+    $(window).on("megse", (event)=>{
+        let objPeldany = event.detail;
+        console.log(objPeldany)
+        console.log("Mégse esemény")
+        TODOLIST2[objPeldany.index].kesz = false;
+        szuloELEM.empty()
+        new Megjelenit(TODOLIST2, szuloELEM)
+        console.log(TODOLIST2)
+    })
+
 });
